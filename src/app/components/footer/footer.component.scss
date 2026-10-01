@@ -73,15 +73,17 @@
       text-decoration: none;
       transition: all 0.2s;
 
-      mat-icon {
-        font-size: 1.15rem;
-        width: 1.15rem;
-        height: 1.15rem;
+      mat-icon, svg {
+        width: 18px;
+        height: 18px;
+        display: block;
       }
 
       &:hover {
         color: var(--cyan-accent);
         border-color: var(--border-cyan);
+        background: rgba(0, 229, 255, 0.08);
+        transform: translateY(-1px);
       }
     }
   }
