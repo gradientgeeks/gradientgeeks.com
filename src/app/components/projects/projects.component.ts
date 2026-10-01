@@ -61,23 +61,6 @@ export class ProjectsComponent {
       dockerUrl: 'https://quay.io/repository/gradientgeeks/aerostream'
     },
     {
-      id: 'dilithiauth',
-      name: 'DilithiAuth',
-      badge: 'POST-QUANTUM • NIST FIPS 204',
-      badgeType: 'purple',
-      tagline: 'Quantum-Resistant Identity Provider & Token Service',
-      description: 'An advanced authentication server implementing hybrid digital signatures by combining classical Ed25519 with post-quantum ML-DSA-44 (NIST FIPS 204), guarding against "Harvest Now, Decrypt Later" threats.',
-      highlights: [
-        'Hybrid classical (Ed25519) + post-quantum (ML-DSA-44) token signing',
-        'Standard OAuth 2.0 and OpenID Connect (OIDC) compliant flows',
-        'Mitigates future Shor\'s algorithm quantum computing attacks',
-        'High-speed lattice-based cryptographic verification in Rust',
-        'Zero external database dependencies with lightweight persistent storage'
-      ],
-      techStack: ['Rust', 'ML-DSA-44', 'Ed25519', 'NIST FIPS 204', 'OAuth2/OIDC', 'Actix/Tokio'],
-      githubUrl: 'https://github.com/gradientgeeks/dilithiauth'
-    },
-    {
       id: 'aerostream-sdk',
       name: 'AeroStream Client SDKs',
       badge: 'OFFICIAL SDKs',
@@ -112,7 +95,7 @@ export class ProjectsComponent {
     }
   ];
 
-  setFilter(filter: 'all' | 'streaming' | 'security' | 'sdks'): void {
+  setFilter(filter: 'all' | 'streaming' | 'sdks'): void {
     this.activeFilter.set(filter);
   }
 
@@ -120,7 +103,6 @@ export class ProjectsComponent {
     const f = this.activeFilter();
     if (f === 'all') return this.projects;
     if (f === 'streaming') return this.projects.filter(p => p.id === 'aerostream' || p.id === 'aerostream-examples');
-    if (f === 'security') return this.projects.filter(p => p.id === 'dilithiauth');
     if (f === 'sdks') return this.projects.filter(p => p.id === 'aerostream-sdk');
     return this.projects;
   }

@@ -55,9 +55,9 @@
               <td><span class="highlight-cyan">Embedded Raft</span>: BoltDB state machine with sub-150ms leader elections</td>
             </tr>
             <tr>
-              <td><strong>Cryptographic Posture</strong></td>
-              <td>Vulnerable classical RSA / ECC (vulnerable to Shor's algorithm)</td>
-              <td><span class="highlight-purple">Post-Quantum</span>: Hybrid Ed25519 + NIST FIPS 204 ML-DSA-44 lattice cryptography</td>
+              <td><strong>Storage Lifecycle</strong></td>
+              <td>Expensive all-NVMe retention or complex external tiering plugins</td>
+              <td><span class="highlight-cyan">Built-in Tiering</span>: Asynchronous sealed-segment offload to S3/MinIO/GCS with transparent fetch</td>
             </tr>
           </tbody>
         </table>

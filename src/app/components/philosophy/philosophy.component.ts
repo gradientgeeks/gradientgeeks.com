@@ -35,10 +35,10 @@ export class PhilosophyComponent {
       description: 'Distributed coordination is embedded natively using HashiCorp Raft and BoltDB. No ZooKeeper, no external metadata clusters, and no JVM garbage collection tuning. Sub-150ms leader elections out of the box.'
     },
     {
-      icon: 'enhanced_encryption',
-      title: 'Post-Quantum Preparedness',
-      tag: 'SECURITY ENGINEERING',
-      description: 'We believe cryptography must stay ahead of the quantum horizon. Our security systems implement hybrid signatures pairing classical Ed25519 with NIST FIPS 204 ML-DSA-44 lattice-based algorithms.'
+      icon: 'layers',
+      title: 'Cloud-Native Tiered Storage',
+      tag: 'STORAGE EFFICIENCY',
+      description: 'Transparent offload of sealed log segments to object storage (AWS S3, MinIO, Google Cloud Storage) with local NVMe caching, slashing streaming storage costs by up to 80% while retaining infinite message retention.'
     }
   ];
 }

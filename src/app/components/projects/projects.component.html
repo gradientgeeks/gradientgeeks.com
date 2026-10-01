@@ -20,7 +20,7 @@
       <span class="section-tag">OPEN SOURCE ECOSYSTEM</span>
       <h2 class="section-title">Core Initiatives & Infrastructure</h2>
       <p class="section-desc">
-        Engineered for predictable tail latency, verifiable correctness, and quantum-resistant security.
+        Engineered for predictable tail latency, verifiable correctness, and zero-copy streaming performance.
       </p>
 
       <!-- Category Filter Pills -->
@@ -36,12 +36,6 @@
           [class.active]="activeFilter() === 'streaming'" 
           (click)="setFilter('streaming')">
           Event Streaming
-        </button>
-        <button 
-          class="filter-pill" 
-          [class.active]="activeFilter() === 'security'" 
-          (click)="setFilter('security')">
-          Post-Quantum Security
         </button>
         <button 
           class="filter-pill" 

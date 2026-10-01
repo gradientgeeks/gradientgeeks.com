@@ -6,22 +6,22 @@
   <div class="hero-container">
     <!-- Top Announcement Pill -->
     <div class="announcement-pill">
-      <span class="pill-badge">RESEARCH & LABS</span>
-      <span class="pill-text">Building resilient systems for the post-quantum & high-throughput era</span>
+      <span class="pill-badge">RESEARCH &amp; LABS</span>
+      <span class="pill-text">Building resilient, zero-copy distributed systems for high-throughput streaming</span>
       <mat-icon class="pill-icon">arrow_forward</mat-icon>
     </div>
 
     <!-- Main Headline -->
     <h1 class="hero-title">
       Architecting the Next Era of <br />
-      <span class="gradient-text">Distributed Systems</span> & <span class="gradient-purple-text">Post-Quantum Security</span>.
+      <span class="gradient-text">Distributed Systems</span> &amp; <span class="gradient-purple-text">Zero-Copy Streaming</span>.
     </h1>
 
     <!-- Sub-headline -->
     <p class="hero-description">
       Gradient Geeks engineers open-source infrastructure with true mechanical sympathy. 
-      From <strong>AeroStream</strong>, a zero-dependency Kafka-compatible event streaming platform in Rust & Go, 
-      to <strong>DilithiAuth</strong>, a post-quantum identity engine leveraging NIST FIPS 204 ML-DSA-44.
+      From <strong>AeroStream</strong>, a zero-dependency Kafka-compatible event streaming platform in Rust &amp; Go, 
+      to ultra-low-latency native binary protocol client SDKs.
     </p>
 
     <!-- CTAs -->
@@ -54,9 +54,9 @@
           </button>
           <button 
             class="term-tab" 
-            [class.active]="activeCommand() === 'dilithiauth'" 
-            (click)="selectCommand('dilithiauth')">
-            <mat-icon>security</mat-icon> DilithiAuth Setup
+            [class.active]="activeCommand() === 'sdk'" 
+            (click)="selectCommand('sdk')">
+            <mat-icon>memory</mat-icon> Go Native SDK
           </button>
         </div>
         <button class="copy-btn" (click)="copyCurrentCommand()" matTooltip="Copy command">
@@ -74,10 +74,10 @@
     <div class="tech-pills">
       <div class="tech-chip"><span class="chip-dot cyan"></span> Rust 1.98 Shard-per-Core</div>
       <div class="tech-chip"><span class="chip-dot cyan"></span> Go 1.26 Raft Consensus</div>
-      <div class="tech-chip"><span class="chip-dot purple"></span> NIST FIPS 204 (ML-DSA-44)</div>
       <div class="tech-chip"><span class="chip-dot cyan"></span> 100% Kafka Wire Compatible</div>
       <div class="tech-chip"><span class="chip-dot green"></span> Linux sendfile(2) DMA</div>
-      <div class="tech-chip"><span class="chip-dot purple"></span> Hybrid Post-Quantum IdP</div>
+      <div class="tech-chip"><span class="chip-dot purple"></span> Polyglot Native SDKs</div>
+      <div class="tech-chip"><span class="chip-dot cyan"></span> Multi-Cloud Tiered Storage</div>
     </div>
   </div>
 </section>

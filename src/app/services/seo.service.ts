@@ -16,9 +16,9 @@ export class SeoService {
   private readonly titleService = inject(Title);
   private readonly metaService = inject(Meta);
 
-  private readonly defaultTitle = 'Gradient Geeks | High-Performance Distributed Systems & Post-Quantum Infrastructure';
-  private readonly defaultDescription = 'Gradient Geeks builds open-source high-performance distributed systems, ultra-low-latency event streaming (AeroStream), and post-quantum authentication (DilithiAuth).';
-  private readonly defaultKeywords = 'Gradient Geeks, distributed systems, event streaming, kafka alternative, rust, golang, aerostream, dilithiauth, post-quantum cryptography, fips 204, ml-dsa, zero-copy, shard-per-core';
+  private readonly defaultTitle = 'Gradient Geeks | High-Performance Distributed Systems & Event Streaming';
+  private readonly defaultDescription = 'Gradient Geeks builds open-source high-performance distributed systems, ultra-low-latency event streaming (AeroStream), and zero-copy data infrastructure.';
+  private readonly defaultKeywords = 'Gradient Geeks, distributed systems, event streaming, kafka alternative, rust, golang, aerostream, zero-copy, shard-per-core, tiered storage, mechanical sympathy';
   private readonly defaultUrl = 'https://gradientgeeks.com';
   private readonly defaultImage = 'https://gradientgeeks.com/assets/logo.png';
 

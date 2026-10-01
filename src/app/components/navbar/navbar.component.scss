@@ -141,6 +141,13 @@
     color: var(--text-primary);
     border-radius: 8px;
     font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    svg {
+      flex-shrink: 0;
+    }
 
     &:hover {
       border-color: rgba(255, 255, 255, 0.3);
@@ -200,6 +207,14 @@
 
       .w-full {
         width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        svg {
+          flex-shrink: 0;
+        }
       }
     }
   }

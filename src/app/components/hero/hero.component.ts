@@ -19,15 +19,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  readonly activeCommand = signal<'aerostream' | 'dilithiauth'>('aerostream');
+  readonly activeCommand = signal<'aerostream' | 'sdk'>('aerostream');
   readonly copied = signal<boolean>(false);
 
   readonly commands = {
     aerostream: 'docker run -d -p 9092:9092 -p 9001:9001 quay.io/gradientgeeks/aerostream:latest',
-    dilithiauth: 'git clone https://github.com/gradientgeeks/dilithiauth.git && cd dilithiauth && cargo run'
+    sdk: 'go get github.com/gradientgeeks/aerostream-sdk/go'
   };
 
-  selectCommand(type: 'aerostream' | 'dilithiauth'): void {
+  selectCommand(type: 'aerostream' | 'sdk'): void {
     this.activeCommand.set(type);
     this.copied.set(false);
   }

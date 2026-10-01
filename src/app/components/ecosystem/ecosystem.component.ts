@@ -66,14 +66,6 @@ export class EcosystemComponent {
       language: 'Multi-Language',
       license: 'Apache-2.0',
       starsUrl: 'https://github.com/gradientgeeks/aerostream-examples'
-    },
-    {
-      name: 'DilithiAuth IdP',
-      repo: 'gradientgeeks/dilithiauth',
-      role: 'Post-Quantum hybrid IdP combining Ed25519 & NIST FIPS 204 ML-DSA-44',
-      language: 'Rust',
-      license: 'Apache-2.0',
-      starsUrl: 'https://github.com/gradientgeeks/dilithiauth'
     }
   ];
 }
