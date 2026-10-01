@@ -1,0 +1,55 @@
+<section class="sponsors-section" id="community">
+  <div class="sponsors-container">
+    <div class="section-header">
+      <span class="section-tag">COMMUNITY & SPONSORSHIP</span>
+      <h2 class="section-title">Support Independent Open Source</h2>
+      <p class="section-desc">
+        Gradient Geeks operates independently. Your sponsorship directly funds bare-metal benchmark servers, fuzzing infrastructure, and continuous security audits.
+      </p>
+    </div>
+
+    <!-- Tier Cards -->
+    <div class="tiers-grid">
+      @for (tier of tiers; track tier.name) {
+        <div class="tier-card" [class.popular]="tier.badge === 'POPULAR'">
+          <div class="tier-top">
+            <span class="tier-badge">{{ tier.badge }}</span>
+            <h3 class="tier-name">{{ tier.name }}</h3>
+            <div class="tier-price">{{ tier.price }}</div>
+            <p class="tier-desc">{{ tier.description }}</p>
+          </div>
+
+          <div class="tier-perks">
+            <span class="perks-title">Included Benefits:</span>
+            <ul>
+              @for (perk of tier.perks; track perk) {
+                <li>
+                  <mat-icon class="check">check_circle</mat-icon>
+                  <span>{{ perk }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+
+          <a [href]="sponsorUrl" target="_blank" rel="noopener" mat-flat-button class="sponsor-tier-btn">
+            <mat-icon>favorite</mat-icon> Sponsor with Stripe
+          </a>
+        </div>
+      }
+    </div>
+
+    <!-- Sponsor Banner Callout -->
+    <div class="stripe-callout">
+      <div class="stripe-info">
+        <mat-icon class="heart-icon">volunteer_activism</mat-icon>
+        <div>
+          <h4>Powered by GitHub Sponsors & Stripe</h4>
+          <p>Tax-deductible or business invoicing with Stripe billing. Zero fee deductions on GitHub Sponsors.</p>
+        </div>
+      </div>
+      <a [href]="sponsorUrl" target="_blank" rel="noopener" mat-flat-button class="sponsor-cta-btn">
+        <mat-icon>open_in_new</mat-icon> Become a Sponsor
+      </a>
+    </div>
+  </div>
+</section>

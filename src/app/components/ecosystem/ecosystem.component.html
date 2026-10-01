@@ -1,0 +1,50 @@
+<section class="ecosystem-section" id="ecosystem">
+  <div class="ecosystem-container">
+    <div class="section-header">
+      <span class="section-tag">OPEN REPOSITORIES</span>
+      <h2 class="section-title">The Gradient Geeks Ecosystem</h2>
+      <p class="section-desc">
+        Modular, clean, and decoupled. Every component is Apache 2.0 open-source and built for independent developer adoption.
+      </p>
+    </div>
+
+    <div class="repos-grid">
+      @for (repo of repos; track repo.repo) {
+        <a [href]="repo.starsUrl" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-card-top">
+            <div class="repo-icon">
+              <mat-icon>folder_open</mat-icon>
+            </div>
+            <div class="repo-meta">
+              <span class="repo-lang">{{ repo.language }}</span>
+              <span class="repo-license">{{ repo.license }}</span>
+            </div>
+          </div>
+
+          <h3 class="repo-name">{{ repo.name }}</h3>
+          <code class="repo-path font-mono">{{ repo.repo }}</code>
+          <p class="repo-role">{{ repo.role }}</p>
+
+          <div class="repo-action">
+            <span>Explore repository</span>
+            <mat-icon>arrow_forward</mat-icon>
+          </div>
+        </a>
+      }
+    </div>
+
+    <!-- Central Hub Callout -->
+    <div class="hub-callout">
+      <div class="hub-info">
+        <mat-icon class="hub-icon">account_tree</mat-icon>
+        <div>
+          <h4>Explore the Organization on GitHub</h4>
+          <p>Clone, inspect, star, and contribute to all Gradient Geeks repositories under one umbrella.</p>
+        </div>
+      </div>
+      <a href="https://github.com/gradientgeeks" target="_blank" rel="noopener" mat-flat-button class="hub-btn">
+        <mat-icon>code</mat-icon> github.com/gradientgeeks
+      </a>
+    </div>
+  </div>
+</section>

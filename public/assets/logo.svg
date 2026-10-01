@@ -1,0 +1,53 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="nabla-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="nabla-gradA" x1="60" y1="90" x2="340" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="35%" stop-color="#0ea5e9" />
+      <stop offset="70%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="nabla-gradB" x1="340" y1="90" x2="200" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="35%" stop-color="#0ea5e9" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="nabla-gradC" x1="200" y1="330" x2="60" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="100%" stop-color="#10b981" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="0%" stop-color="#00f2fe" />
+    </linearGradient>
+    <radialGradient id="nabla-core" cx="200" cy="180" r="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Subtle Vector Target Rings -->
+  <circle cx="200" cy="190" r="160" stroke="#06b6d4" stroke-width="1" stroke-dasharray="3 7" opacity="0.3" />
+  <circle cx="200" cy="190" r="120" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="2 6" opacity="0.25" />
+  
+  <!-- Ambient Inverted Delta Glow -->
+  <polygon points="65,95 335,95 200,330" fill="none" stroke="url(#nabla-gradA)" stroke-width="14" stroke-linejoin="round" filter="url(#nabla-glow)" opacity="0.6" />
+  
+  <!-- Core Gradient Fill -->
+  <polygon points="76,104 324,104 200,318" fill="url(#nabla-core)" />
+  
+  <!-- Faceted Inverted Delta (Nabla / Gradient Symbol) -->
+  <path d="M60 90 L340 90 L270 145 L130 145 Z" fill="url(#nabla-gradA)" opacity="0.95" />
+  <path d="M340 90 L200 335 L200 240 L270 145 Z" fill="url(#nabla-gradB)" opacity="0.90" />
+  <path d="M60 90 L130 145 L200 240 L200 335 Z" fill="url(#nabla-gradC)" opacity="0.85" />
+  
+  <!-- Inner Delta Hollow -->
+  <polygon points="130,145 270,145 200,240" fill="#090d16" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4" />
+  
+  <!-- Geek Bracket Symbol -->
+  <g transform="translate(178, 160)">
+    <path d="M12 8 L4 18 L12 28" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+    <path d="M32 8 L40 18 L32 28" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+    <line x1="26" y1="7" x2="18" y2="29" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>

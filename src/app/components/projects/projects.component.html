@@ -1,0 +1,119 @@
+<section class="projects-section" id="projects">
+  <div class="projects-container">
+    
+    <!-- Early Stage Development Notice Banner -->
+    <div class="development-notice-banner">
+      <div class="notice-icon-box">
+        <mat-icon>science</mat-icon>
+      </div>
+      <div class="notice-content">
+        <h4>Active Early-Stage Research & Development (v0.1.0-preview)</h4>
+        <p>
+          Projects under Gradient Geeks are actively evolving with rapid architectural iterations. 
+          We invite distributed systems engineers, security researchers, and systems developers to test, benchmark, and contribute feedback.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-tag">OPEN SOURCE ECOSYSTEM</span>
+      <h2 class="section-title">Core Initiatives & Infrastructure</h2>
+      <p class="section-desc">
+        Engineered for predictable tail latency, verifiable correctness, and quantum-resistant security.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-pills">
+        <button 
+          class="filter-pill" 
+          [class.active]="activeFilter() === 'all'" 
+          (click)="setFilter('all')">
+          All Projects
+        </button>
+        <button 
+          class="filter-pill" 
+          [class.active]="activeFilter() === 'streaming'" 
+          (click)="setFilter('streaming')">
+          Event Streaming
+        </button>
+        <button 
+          class="filter-pill" 
+          [class.active]="activeFilter() === 'security'" 
+          (click)="setFilter('security')">
+          Post-Quantum Security
+        </button>
+        <button 
+          class="filter-pill" 
+          [class.active]="activeFilter() === 'sdks'" 
+          (click)="setFilter('sdks')">
+          Client SDKs
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+      @for (project of getFilteredProjects(); track project.id) {
+        <div class="project-card" [class.featured]="project.id === 'aerostream'">
+          <div class="card-header">
+            <span class="project-badge" [ngClass]="project.badgeType">{{ project.badge }}</span>
+            <div class="external-links">
+              <a [href]="project.githubUrl" target="_blank" rel="noopener" class="icon-link" matTooltip="View on GitHub">
+                <mat-icon>code</mat-icon>
+              </a>
+              @if (project.siteUrl) {
+                <a [href]="project.siteUrl" target="_blank" rel="noopener" class="icon-link" matTooltip="Visit Project Site">
+                  <mat-icon>open_in_new</mat-icon>
+                </a>
+              }
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h3 class="project-name">{{ project.name }}</h3>
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <p class="project-description">{{ project.description }}</p>
+
+            <div class="highlights-box">
+              <span class="highlights-title">Key Capabilities:</span>
+              <ul class="highlights-list">
+                @for (item of project.highlights; track item) {
+                  <li>
+                    <mat-icon class="check-icon">check_circle</mat-icon>
+                    <span>{{ item }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="tech-stack-row">
+              @for (tech of project.techStack; track tech) {
+                <span class="tech-tag">{{ tech }}</span>
+              }
+            </div>
+
+            <div class="actions-row">
+              <a [href]="project.githubUrl" target="_blank" rel="noopener" mat-stroked-button class="action-btn">
+                <mat-icon>star_border</mat-icon> Star Repository
+              </a>
+              @if (project.siteUrl) {
+                <a [href]="project.siteUrl" target="_blank" rel="noopener" mat-flat-button class="action-btn primary">
+                  <mat-icon>launch</mat-icon> Launch Site
+                </a>
+              }
+              @if (project.docsUrl && !project.siteUrl) {
+                <a [href]="project.docsUrl" target="_blank" rel="noopener" mat-flat-button class="action-btn primary">
+                  <mat-icon>menu_book</mat-icon> SDK Docs
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

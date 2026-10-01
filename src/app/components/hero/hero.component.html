@@ -1,0 +1,83 @@
+<section class="hero-section">
+  <!-- Glowing Background Effects -->
+  <div class="glow-orb glow-orb-cyan"></div>
+  <div class="glow-orb glow-orb-purple"></div>
+
+  <div class="hero-container">
+    <!-- Top Announcement Pill -->
+    <div class="announcement-pill">
+      <span class="pill-badge">RESEARCH & LABS</span>
+      <span class="pill-text">Building resilient systems for the post-quantum & high-throughput era</span>
+      <mat-icon class="pill-icon">arrow_forward</mat-icon>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="hero-title">
+      Architecting the Next Era of <br />
+      <span class="gradient-text">Distributed Systems</span> & <span class="gradient-purple-text">Post-Quantum Security</span>.
+    </h1>
+
+    <!-- Sub-headline -->
+    <p class="hero-description">
+      Gradient Geeks engineers open-source infrastructure with true mechanical sympathy. 
+      From <strong>AeroStream</strong>, a zero-dependency Kafka-compatible event streaming platform in Rust & Go, 
+      to <strong>DilithiAuth</strong>, a post-quantum identity engine leveraging NIST FIPS 204 ML-DSA-44.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-actions">
+      <a href="https://aerostream.gradientgeeks.com" target="_blank" rel="noopener" mat-flat-button class="cta-primary">
+        <mat-icon>rocket_launch</mat-icon> Explore AeroStream
+      </a>
+      <a href="#projects" mat-stroked-button class="cta-secondary">
+        <mat-icon>grid_view</mat-icon> All Projects
+      </a>
+      <a href="https://github.com/gradientgeeks" target="_blank" rel="noopener" mat-stroked-button class="cta-secondary">
+        <mat-icon>terminal</mat-icon> GitHub Org
+      </a>
+    </div>
+
+    <!-- Interactive Quickstart Terminal Box -->
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="terminal-tabs">
+          <button 
+            class="term-tab" 
+            [class.active]="activeCommand() === 'aerostream'" 
+            (click)="selectCommand('aerostream')">
+            <mat-icon>sync_alt</mat-icon> AeroStream Run
+          </button>
+          <button 
+            class="term-tab" 
+            [class.active]="activeCommand() === 'dilithiauth'" 
+            (click)="selectCommand('dilithiauth')">
+            <mat-icon>security</mat-icon> DilithiAuth Setup
+          </button>
+        </div>
+        <button class="copy-btn" (click)="copyCurrentCommand()" matTooltip="Copy command">
+          <mat-icon>{{ copied() ? 'check' : 'content_copy' }}</mat-icon>
+          <span>{{ copied() ? 'Copied!' : 'Copy' }}</span>
+        </button>
+      </div>
+      <div class="terminal-body">
+        <span class="prompt">$</span>
+        <code class="command-text font-mono">{{ commands[activeCommand()] }}</code>
+      </div>
+    </div>
+
+    <!-- Tech Stack Highlights -->
+    <div class="tech-pills">
+      <div class="tech-chip"><span class="chip-dot cyan"></span> Rust 1.98 Shard-per-Core</div>
+      <div class="tech-chip"><span class="chip-dot cyan"></span> Go 1.26 Raft Consensus</div>
+      <div class="tech-chip"><span class="chip-dot purple"></span> NIST FIPS 204 (ML-DSA-44)</div>
+      <div class="tech-chip"><span class="chip-dot cyan"></span> 100% Kafka Wire Compatible</div>
+      <div class="tech-chip"><span class="chip-dot green"></span> Linux sendfile(2) DMA</div>
+      <div class="tech-chip"><span class="chip-dot purple"></span> Hybrid Post-Quantum IdP</div>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$cyan-palette,
+    tertiary: mat.$violet-palette,
+  ),
+  typography: (
+    brand-family: 'Outfit, sans-serif',
+    plain-family: 'Inter, sans-serif',
+  ),
+  density: (
+    scale: 0
+  )
+));
+
+:root {
+  @include mat.all-component-themes($theme);
+  
+  --bg-dark: #07090e;
+  --bg-surface: #0d121c;
+  --bg-surface-elevated: #131a29;
+  --bg-surface-hover: #1b2438;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-cyan: rgba(0, 229, 255, 0.28);
+  --cyan-accent: #00e5ff;
+  --cyan-glow: rgba(0, 229, 255, 0.18);
+  --purple-accent: #b388ff;
+  --green-accent: #00e676;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --font-brand: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-accent);
+}
+
+/* Common utilities */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px var(--cyan-glow);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 20%, var(--cyan-accent) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-purple-text {
+  background: linear-gradient(135deg, #ffffff 20%, var(--purple-accent) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

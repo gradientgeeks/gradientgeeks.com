@@ -1,0 +1,71 @@
+<header class="navbar-wrapper">
+  <div class="nav-container">
+    <!-- Brand / Logo -->
+    <a href="#" class="brand-link" (click)="closeMobileMenu()">
+      <div class="logo-box">
+        <img src="assets/logo.svg" alt="Gradient Geeks Logo" class="brand-logo" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">GRADIENT<span class="brand-highlight">GEEKS</span></span>
+        <span class="brand-tag">SYSTEMS RESEARCH</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="desktop-nav">
+      <a href="#projects" class="nav-item">Projects</a>
+      <a href="#architecture" class="nav-item">Philosophy</a>
+      <a href="#ecosystem" class="nav-item">Ecosystem</a>
+      <a href="#community" class="nav-item">Sponsors</a>
+      <a href="https://aerostream.gradientgeeks.com" target="_blank" rel="noopener" class="nav-item external-link">
+        AeroStream <mat-icon class="external-icon">open_in_new</mat-icon>
+      </a>
+    </nav>
+
+    <!-- Desktop Action Buttons -->
+    <div class="nav-actions">
+      <a href="https://github.com/gradientgeeks" target="_blank" rel="noopener" mat-stroked-button class="github-btn">
+        <mat-icon>code</mat-icon> GitHub
+      </a>
+      <a href="https://github.com/sponsors/gradientgeeks" target="_blank" rel="noopener" mat-flat-button class="sponsor-btn">
+        <mat-icon>favorite</mat-icon> Sponsor
+      </a>
+      
+      <!-- Mobile Menu Toggle Button -->
+      <button mat-icon-button class="mobile-toggle" (click)="toggleMobileMenu()" aria-label="Toggle navigation menu">
+        <mat-icon>{{ isMobileMenuOpen() ? 'close' : 'menu' }}</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  @if (isMobileMenuOpen()) {
+    <div class="mobile-drawer">
+      <nav class="mobile-nav-list">
+        <a href="#projects" class="mobile-nav-item" (click)="closeMobileMenu()">
+          <mat-icon>layers</mat-icon> Projects
+        </a>
+        <a href="#architecture" class="mobile-nav-item" (click)="closeMobileMenu()">
+          <mat-icon>memory</mat-icon> Philosophy & Architecture
+        </a>
+        <a href="#ecosystem" class="mobile-nav-item" (click)="closeMobileMenu()">
+          <mat-icon>hub</mat-icon> Open Source Ecosystem
+        </a>
+        <a href="#community" class="mobile-nav-item" (click)="closeMobileMenu()">
+          <mat-icon>favorite</mat-icon> Sponsorship & Community
+        </a>
+        <a href="https://aerostream.gradientgeeks.com" target="_blank" rel="noopener" class="mobile-nav-item external" (click)="closeMobileMenu()">
+          <mat-icon>rocket_launch</mat-icon> AeroStream Platform
+        </a>
+        <div class="mobile-actions">
+          <a href="https://github.com/gradientgeeks" target="_blank" rel="noopener" mat-stroked-button class="w-full">
+            <mat-icon>code</mat-icon> GitHub Organization
+          </a>
+          <a href="https://github.com/sponsors/gradientgeeks" target="_blank" rel="noopener" mat-flat-button class="w-full sponsor-btn">
+            <mat-icon>favorite</mat-icon> Support on GitHub Sponsors
+          </a>
+        </div>
+      </nav>
+    </div>
+  }
+</header>

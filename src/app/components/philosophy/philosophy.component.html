@@ -1,0 +1,67 @@
+<section class="philosophy-section" id="architecture">
+  <div class="philosophy-container">
+    <div class="section-header">
+      <span class="section-tag">ENGINEERING DOCTRINE</span>
+      <h2 class="section-title">Designed with Mechanical Sympathy</h2>
+      <p class="section-desc">
+        We architect systems from first principles, respecting modern CPU caches, kernel bypasses, and distributed invariants.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      @for (pillar of pillars; track pillar.title) {
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <mat-icon>{{ pillar.icon }}</mat-icon>
+          </div>
+          <span class="pillar-tag">{{ pillar.tag }}</span>
+          <h3 class="pillar-title">{{ pillar.title }}</h3>
+          <p class="pillar-desc">{{ pillar.description }}</p>
+        </div>
+      }
+    </div>
+
+    <!-- Comparative Table -->
+    <div class="comparison-card">
+      <h3 class="comp-title">The Paradigm Shift: Legacy Infrastructure vs Gradient Geeks</h3>
+      <div class="table-scroll">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Traditional Architecture</th>
+              <th>Gradient Geeks Engineering</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Runtime Footprint</strong></td>
+              <td>Heavy JVM, 1–8 GB initial heap allocation, GC pauses</td>
+              <td><span class="highlight-cyan">Zero JVM</span>: Lightweight Rust binaries & Go static executables (&lt;50 MB base)</td>
+            </tr>
+            <tr>
+              <td><strong>Thread Model</strong></td>
+              <td>Shared-memory multi-threading with mutex contention</td>
+              <td><span class="highlight-cyan">Shard-per-Core</span>: Pinned CPU affinity with lock-free bounded flume channels</td>
+            </tr>
+            <tr>
+              <td><strong>I/O Path</strong></td>
+              <td>Kernel &rarr; Userspace JVM buffer &rarr; Kernel socket</td>
+              <td><span class="highlight-cyan">Zero-Copy DMA</span>: Linux <code>sendfile(2)</code> direct page cache transfer</td>
+            </tr>
+            <tr>
+              <td><strong>Consensus & Metadata</strong></td>
+              <td>ZooKeeper clusters or complex multi-node KRaft setups</td>
+              <td><span class="highlight-cyan">Embedded Raft</span>: BoltDB state machine with sub-150ms leader elections</td>
+            </tr>
+            <tr>
+              <td><strong>Cryptographic Posture</strong></td>
+              <td>Vulnerable classical RSA / ECC (vulnerable to Shor's algorithm)</td>
+              <td><span class="highlight-purple">Post-Quantum</span>: Hybrid Ed25519 + NIST FIPS 204 ML-DSA-44 lattice cryptography</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
