@@ -5,7 +5,6 @@ import { HeroComponent } from './components/hero/hero.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { PhilosophyComponent } from './components/philosophy/philosophy.component';
 import { EcosystemComponent } from './components/ecosystem/ecosystem.component';
-import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
@@ -17,7 +16,6 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectsComponent,
     PhilosophyComponent,
     EcosystemComponent,
-    SponsorsComponent,
     FooterComponent
   ],
   templateUrl: './app.html',
